@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="./reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>
+        <nav class="navbar navbar-light bg-secondary">
+            <span class="navbar-brand mb-0 h1">View Highscores</span>
+            <span class="float-right mb-0 h5" id="timer">Time</span>
+        </nav>
+    </h1>
+    <main class="container preQuiz">
+        <h1 class="card ml-5 mr-5 row">
+            <h2 class="card-body mr-5 ml-5 bg-secondary">
+                <div class="h2 text-center">
+                    Coding Quiz Challenge
+                </div>
+                <div class="col-12 text-center row justify-content-center h4">
+                    Attempt to answer the following code related questions within the limited time.
+                    Keep in mind answering questions incorrectly will reduce time by 15 seconds!
+                    <h3 id="btnStart" class="btn btn-primary mt-3">
+                        Start Quiz
+                    </h3>
+                </div>
+            </h2>
+        </h1>
+    </main>
+    <main class="container preQuizQuestions">
+        <h1 class= "card row">
+            <div class="card-body h4" id="q">Example question #1</div>
+        </h1>
+        <h2 class="d-flex flex-column">
+            <div class="row btn btn-outline-secondary mt-3 col-2" id="a">Example answer</div>
+            <div class="row btn btn-outline-secondary mt-3 col-2" id="b">Example answer</div>
+            <div class="row btn btn-outline-secondary mt-3 col-2" id="c">Example answer</div>
+            <div class="row btn btn-outline-secondary mt-3 col-2" id="d">Example answer</div>
+        </h2>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
