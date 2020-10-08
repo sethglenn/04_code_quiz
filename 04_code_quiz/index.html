@@ -45,24 +45,36 @@
             <div class="row btn btn-outline-secondary mt-3 col-2" id="d">Example answer</div>
         </h2>
     </main>
-    <main class= "container preQuizQuestions">
+    <main class= "container preQuizQuestions highScoreSubmit">
         <h1 class="card row ml-5 mr-5">
             <div class="card-body mr-5 ml-5 bg-secondary">
                 <div class="h2 text-center">
                     All done!  
                   <div class="row justify-content-center">
-                    Your final score is <div class="ml-3">0</div>     
+                    Your final score is <div class="ml-3 finalScore">0</div>     
                   </div>
                 </div>
                 <div class="h3 row justify-content-center">
                         Enter initials:
                     <div class="form-group ml-3">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                    <input type="text" class="form-control highScoreInput" id="formGroupExampleInput" placeholder="">
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="btn btn-primary mb-3">Submit</div>
+                    <div class="btn btn-primary mb-3 submitBtn">Submit</div>
                 </div>
+            </div>
+        </h1>
+    </main>
+    <main class= "container preQuizQuestions highScoreBoard">
+        <h1 class="card row ml-5 mr-5">
+            <div class="card-body mr-5 ml-5 bg-secondary">
+                <div class="h2 text-center row justify-content-center">Highscores</div>
+                <ul class="bg-light h4 row mb-3" id="highScoreList"></ul>
+                <div class="row justify-content-center">
+                    <div class="btn btn-primary mb-3 mr-3 goBack">Go back</div>
+                    <div class="btn btn-primary mb-3 clearScores">Clear Highscores</div>
+                </div>                     
             </div>
         </h1>
     </main>
