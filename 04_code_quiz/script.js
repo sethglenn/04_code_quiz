@@ -37,15 +37,17 @@ var questions2 = [
         answer: ["Brackets",
         "Quotations",
         "Curly brackets",
-        "None of the above"]
+        "None of the above"],
+        correct: "Quotations"
     },
     {
         question: "What does JS mean?",
         answer: [ "Just Study",
         "John Stamos",
         "July September",
-        "Java Script"
-        ]
+        "JavaScript"
+        ],
+        correct: "JavaScript"
 
     },
     {
@@ -54,7 +56,8 @@ var questions2 = [
         "Bottom of body tag",
         "Header tag",
         "Outside of the html tag"
-        ]
+        ],
+        correct: "Bottom of body tag"
 
     }
 
@@ -90,15 +93,16 @@ function quizStart(event){
         startTimer()
         console.log(secondsLeft);
 
-        var wrongClicks = choiceA;
+            var wrong = [choiceA, choiceC, choiceD];
         
-        // for (let i = 0; i < wrongClicks.length; i++){
-        wrongClicks.addEventListener("click", function(){
-                timer.textContent -= 15;
+            for (let i = 0; i < wrong.length; i++){
+            wrong[i].addEventListener("click", function(){
+            secondsLeft -= 15;
         })
 
     }
    
+}
 }
 // Function(s) that advances quiz through question sets
 function quizAdvance(event){
@@ -167,11 +171,10 @@ function highScores(){
 
 
 }
-function quizAdvance3(event) {
+function quizAdvance3() {
     var highScoreInput = document.querySelector(".highScoreInput");
     finalScore.textContent = secondsLeft;
 
-    event.preventDefault();
     preQuizQuestions.style.display = "none";
     highScoreSubmit.style.display = "block";
         submitBtn.addEventListener("click", function(){
@@ -196,17 +199,17 @@ function quizAdvance3(event) {
 
 
 }
-// function renderHighScores () {
-//     var score = localStorage.getItem("");
+function clearHighscores (){
+    highScoreList.innerHTML = "";
 
-//     if (!score){
-//         return;
-//     }
-// }
+}
 
-// Event listeners
+
+
+
+// Event Listeners
 btnStart.addEventListener("click", quizStart);
-
+clearScores.addEventListener("click", clearHighscores);
 
 for (let i = 0; i < btnAdvance.length; i++){
      btnAdvance[i].addEventListener("click", quizAdvance); 
@@ -221,4 +224,3 @@ goBack.addEventListener("click", function(){
 
 
     
-
